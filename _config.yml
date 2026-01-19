@@ -1,0 +1,192 @@
+# Basic Site Settings
+locale: "en-US"
+site_theme: "default"
+title: "Home"
+title_separator: "-"
+name: &name "Cao Pham Minh Dang"
+description: &description "AI Researcher, Dreamer, Believer – University of Florida"
+url: "https://caophamminhdang.github.io/minhdang/"
+baseurl: ""
+repository: "caophamminhdang/minhdang"
+
+# Site Author
+author:
+  avatar: "profile.jpg"
+  name: "Cao Pham Minh Dang"
+  bio: "AI Researcher, Dreamer, Believer"
+  location: "VinUniversity"
+  email: "24dang.cpm@vinuni.edu.vn"
+
+  # Academic websites
+  googlescholar: "https://scholar.google.com/citations?user=6f9HM24AAAAJ&hl=en"
+
+  # Code & Repositories
+  github: "minhdang"
+
+  # Social media
+  facebook: "Cao Phạm Minh Đăng"
+
+# Publication Categories
+publication_category:
+  books:
+    title: 'Books'
+  manuscripts:
+    title: 'Journal Articles'
+  conferences:
+    title: 'Conference Papers'
+
+# Optional features
+teaser: ""
+breadcrumbs: false
+words_per_minute: 160
+future: true
+read_more: "disabled"
+talkmap_link: false
+
+comments:
+  provider: false
+
+atom_feed:
+  hide: false
+  path:
+
+# Social
+social:
+  type: "Person"
+  name: "Nguyen Do"
+  links:
+    - "https://scholar.google.com/citations?user=6f9HM24AAAAJ&hl=en"
+    - "https://www.facebook.com/nguyen.do.9256"
+    - "https://github.com/nguyendo1801"
+
+# Analytics (tắt)
+analytics:
+  provider: "false"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .github
+  - node_modules
+  - vendor
+  - README
+  - tmp
+  - Gemfile
+  - package.json*
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  toc_levels: 1..6
+
+# Collections
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Output
+permalink: /:categories/:title/
+timezone: America/New_York
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
